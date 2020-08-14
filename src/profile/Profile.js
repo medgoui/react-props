@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Profile = (props) => {
     const { firstName = "Anonymous", bio = "Anonymous", profession = "Anonymous" } = props;
@@ -36,6 +37,12 @@ const Profile = (props) => {
     </div>  
     );
     
+}
+
+Profile.propTypes = {
+    firstName: PropTypes.string,
+    bio: PropTypes.string,
+    profession: PropTypes.string
 }
 
 export default Profile;
